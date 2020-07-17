@@ -2,6 +2,15 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
+
+h1 {
+  font-size: 2rem;
+}
+
+.p-medium {
+  font-size: 1.2rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -11,6 +20,43 @@ a {
 .list-inline  li {
   display: inline-block;
 }
+.btn {
+  padding: 10px 20px;
+  margin-left: 15px;
+  background-color: #000;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.link-arrow {
+  font-size: 1.2rem;
+  color: #0070c8;
+}
+.link-arrow::after {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.bg-grey {
+  background-color: #fafafa;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.m-top-25 {
+  margin-top: 25px;
+}
+.m-bottom-25 {
+  margin-bottom: 25px;
+}
+
 
 /* HEADER */
 
@@ -46,13 +92,11 @@ a {
   text-align: right;
 }
 
-.btn {
-  padding: 10px 20px;
-  margin-left: 15px;
-  background-color: #000;
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: bold;
+.lang a {
+  padding: 2px 5px;
+  color: #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
 .hamburger-icon {
@@ -65,8 +109,64 @@ a {
 .hero {
   position: relative;
   height: 625px;
+  margin-top: 70px;
   background-image: url('../img/hero-bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+.hero-text-app {
+  height: 50px;
+}
+.hero-text p {
+  margin: 15px 0;
+}
+
+/* MAIN */
+
+/* Section products */
+.products {
+  margin: 80px 0;
+}
+
+.product {
+  padding: 60px;
+  margin: 10px;
+}
+.product-title {
+  height: 23px;
+}
+.product-img {
+  display: block;
+  max-width: 100%;
+  max-height: 300px;
+  margin: auto;
+}
+
+/* RESPONSIVE */
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+  .product {
+    padding: 35px;
+  }
+}
+
+/* Smartphone */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .hero-text {
+    width: 100%;
+  }
 }
